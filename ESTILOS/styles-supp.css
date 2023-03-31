@@ -1,0 +1,41 @@
+.form-register{
+    font-family: 'calibri';
+    background: #24303c;
+    color: white;
+    margin: auto;
+    padding: 30px;
+    width: 100%;
+    max-width: 40%;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: .7%;
+    margin-top: 5%;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-family: 'calibri';
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+label{
+    display: block;
+    font-size: 24px;
+    padding: 13px 0;
+    color: #fff;
+    text-shadow: 1px 1px 1px #666;
+}
+textarea{
+    width: 100%;
+    height: 180px;    
+}
+input{
+    margin: auto;
+    width: 100%;
+}
+form{
+    padding: 0%;
+    margin: 10%;
+}

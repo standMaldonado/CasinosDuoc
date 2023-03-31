@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ESTILOS/styles-supp.css">
     <title>Document</title>
 </head>
 <body>
-    hola
+
+    <section class="form-register">
+        <h2>Envíe su formulario</h2>
+        <form action="https://formsubmit.co/ben.ruiz@duocuc.cl" method="POST">
+            <label for="Nombre">Nombre</label>
+            <input type="text" name="name">
+
+            <label for="email">Correo Electronico</label>
+            <input type="email" name="email">
+
+            <label for="email">Asunto</label>
+            <input type="text" name="subject">
+
+            <label for="comments">Problema o sugerencias</label>
+            <textarea name="comments" cols="15" rows="5"></textarea>
+
+            <input type="submit" value="Enviar">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </section>
 </body>
 </html>
