@@ -1,6 +1,6 @@
 .form-register{
     font-family: 'calibri';
-    background: #24303c;
+    background: black;
     color: white;
     margin: auto;
     padding: 30px;
@@ -8,8 +8,9 @@
     max-width: 40%;
     box-sizing: border-box;
     font-size: 14px;
-    border-radius: .7%;
+    border-radius: 1.8%;
     margin-top: 5%;
+    
 }
 
 h2{
@@ -36,6 +37,8 @@ input{
     width: 100%;
 }
 form{
-    padding: 0%;
-    margin: 10%;
+    margin: 5%;
+}
+body{
+    background-color:orange ;
 }
