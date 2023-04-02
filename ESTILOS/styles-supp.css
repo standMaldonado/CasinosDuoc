@@ -1,6 +1,14 @@
+body{
+    background-image: url(../IMAGENES/duoc-fondo.webp);
+    background-repeat:no-repeat ;
+    background-size: 100%;
+    margin: auto;
+    backdrop-filter: blur(3px);
+}   
+
 .form-register{
     font-family: 'calibri';
-    background: black;
+    background: rgba(0, 0, 0, 0.596);
     color: white;
     margin: auto;
     padding: 30px;
@@ -10,6 +18,7 @@
     font-size: 14px;
     border-radius: 1.8%;
     margin-top: 5%;
+    
     
 }
 
@@ -39,6 +48,11 @@ input{
 form{
     margin: 5%;
 }
-body{
-    background-color:orange ;
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
 }
