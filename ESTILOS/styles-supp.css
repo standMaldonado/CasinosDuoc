@@ -2,8 +2,8 @@ body{
     background-image: url(../IMAGENES/duoc-fondo.webp);
     background-repeat:no-repeat ;
     background-size: 100%;
-    margin: auto;
     backdrop-filter: blur(3px);
+    margin: auto;
 }   
 
 .form-register{
