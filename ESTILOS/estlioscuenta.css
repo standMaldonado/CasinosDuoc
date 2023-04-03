@@ -13,3 +13,16 @@ footer {
     font-size: 14px;
     font-family: Arial, sans-serif;
 } 
+.support-button{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    background-color:orange;
+    box-shadow: 0px 3px 12px rgba(0,0, 0, 2);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
