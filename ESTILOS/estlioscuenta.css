@@ -12,6 +12,7 @@ footer {
     text-align: center;
     font-size: 14px;
     font-family: Arial, sans-serif;
+    margin-top: 20%;
 } 
 .support-button{
     height: 60px;
@@ -25,4 +26,8 @@ footer {
     position: fixed;
     bottom: 30px;
     right: 30px;
+}
+
+.container{
+    margin-top: 5%;
 }
