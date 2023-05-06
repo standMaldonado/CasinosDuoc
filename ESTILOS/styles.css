@@ -54,7 +54,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 #btn_entrar{
-    background-color: #04AA6D;
+    background-color: orange;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

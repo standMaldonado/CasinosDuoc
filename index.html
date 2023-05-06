@@ -21,6 +21,19 @@
   <script>
     $(document).ready(function(){
       document.getElementById('cuadro').style.display='block';
+
+      function entrar(){
+
+      // Accede al valor del campo de entrada
+        var valor = document.getElementById("uname").value;
+        var valor2 = document.getElementById("contra").value;
+      // Guarda la variable en localStorage
+      localStorage.setItem("miVariable", valor);
+      localStorage.setItem("lacontra", valor2)
+
+
+      }
+
     });
   </script>
 </head>
@@ -66,7 +79,7 @@
           <input type="text" placeholder="Nombre de Usuario" name="uname" autocomplete="off" id="nom"required>
           <label for="contra"><b>Contraseña</b></label>
           <input type="password" placeholder="Contraseña" name="contra" autocomplete="off" id="con"required>
-          <button type="submit" id="btn_entrar" onclick=entrar(event)>Ingresar</button>
+          <button type="submit" id="btn_entrar" onclick=entrar() >Ingresar</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Recordarme
           </label>
