@@ -18,23 +18,32 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="js/login.js"></script>
+<!--   <script>
+    $(document).ready(function() {
+      if (localStorage.getItem("firstVisit") === null) {
+        console.log("1 visita");
+        $('#cuadro').show();
+        localStorage.setItem("firstVisit", "true");
+      } else {
+        console.log("ya visitado");
+      }
+  });
+  </script> -->
   <script>
-  $(document).ready(function() {
-    // Verificar si la variable "firstVisit" ya ha sido establecida en el almacenamiento local
-    if (localStorage.getItem("firstVisit") === null) {
-      // Si la variable no está definida, significa que es la primera visita
-      console.log("Es tu primera visita a la página.");
-
-      // Mostrar el componente
-      $('#cuadro').show();
-
-      // Guardar la variable "firstVisit" en el almacenamiento local
-      localStorage.setItem("firstVisit", "true");
-    } else {
-      // La variable ya ha sido definida, por lo tanto, no es la primera visita
-      console.log("Ya has visitado la página anteriormente.");
-    }
-});
+    $(document).ready(function() {
+      var visitCount = parseInt(localStorage.getItem("visitCount")) || 0;
+      visitCount++;
+      localStorage.setItem("visitCount", visitCount.toString());
+      if (visitCount >= 10) {
+        $('#cuadro').show();
+      }
+    });
+  </script>
+  <script>
+    $(window).on('beforeunload', function() {
+      /* CERRAR REINICIA EL CONTADOR DE VISITA */
+      localStorage.removeItem("visitCount");
+    });
   </script>
 </head>
 
