@@ -19,22 +19,22 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="js/login.js"></script>
   <script>
-    $(document).ready(function(){
-      document.getElementById('cuadro').style.display='block';
+  $(document).ready(function() {
+    // Verificar si la variable "firstVisit" ya ha sido establecida en el almacenamiento local
+    if (localStorage.getItem("firstVisit") === null) {
+      // Si la variable no está definida, significa que es la primera visita
+      console.log("Es tu primera visita a la página.");
 
-      function entrar(){
+      // Mostrar el componente
+      $('#cuadro').show();
 
-      // Accede al valor del campo de entrada
-        var valor = document.getElementById("uname").value;
-        var valor2 = document.getElementById("contra").value;
-      // Guarda la variable en localStorage
-      localStorage.setItem("miVariable", valor);
-      localStorage.setItem("lacontra", valor2)
-
-
-      }
-
-    });
+      // Guardar la variable "firstVisit" en el almacenamiento local
+      localStorage.setItem("firstVisit", "true");
+    } else {
+      // La variable ya ha sido definida, por lo tanto, no es la primera visita
+      console.log("Ya has visitado la página anteriormente.");
+    }
+});
   </script>
 </head>
 
@@ -69,7 +69,7 @@
     </nav>
   </header>
   <section>
-    <div id="cuadro" class="modal">
+    <div id="cuadro" class="modal" style="display: none;">
       <form id="formm" class="modal-content animate" method="post" style="width: 901.6px;">
         <div class="imagen">
           <img src="IMAGENES/perfil_incongito.png" alt="Avatar" class="avatar">
