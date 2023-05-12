@@ -155,7 +155,7 @@ footer {
     cursor: pointer;
 }
 
-.cart-total{
+.carttotal{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,3 +192,6 @@ footer {
     border-radius: 30px;
 }
 
+#boton_comprar:hover{
+    background-color: darkgray;
+}

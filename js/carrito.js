@@ -1,5 +1,6 @@
 const btnCart = document.querySelector('.container-cart-icon')
 const containerCartProducts = document.querySelector('.container-cart-products')
+const botonC = document.getElementById("boton_comprar")
 
 btnCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hidden-cart')
@@ -47,6 +48,7 @@ productlist.addEventListener('click', e => {
         }
 
         showHTML();
+        
     }
 });
 
@@ -60,6 +62,7 @@ rowProduct.addEventListener('click', (e) => {
         );
         console.log(allproducts)
         showHTML()
+        
     }
 })
 
@@ -67,7 +70,7 @@ rowProduct.addEventListener('click', (e) => {
 const showHTML = () => {
 
 
-
+    
 
     rowProduct.innerHTML = '';
 
@@ -97,8 +100,24 @@ const showHTML = () => {
 
         total = total + parseInt(product.quantity * product.price.slice(1))
         totalofproducts = totalofproducts + product.quantity;
+
+        
     })
 
     valortotal.innerText = `$${total}`;
     countproducts.innerText = totalofproducts;
+    
+}
+window.onclick = function(event) {
+    var cuadro = document.getElementsByClassName('container-cart-products')
+    if (event.target == cuadro) {
+        cuadro.style.display = "none";
+    }
+}
+function comprado(){
+    alert("La petición ha sido enviada al casino.");
+    botonC.addEventListener('click', () => {
+        containerCartProducts.classList.toggle('hidden-cart')
+    })
+    
 }

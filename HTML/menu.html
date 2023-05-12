@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="../ESTILOS/estilosMenu.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script>
+
+  </script>
 </head>
 
 <body>
@@ -87,9 +90,10 @@
             </div>
           </div>
 
-          <div class="cart-total">
+          <div class="carttotal">
             <h3>Total:</h3>
             <span class="total-pagar">$0</span>
+            <a class="btn btn-dark" id="boton_comprar" onclick="comprado()" href="../index.html">Comprar</a>
           </div>
         </div>
       </div>
@@ -273,6 +277,23 @@
               </div>
 
             </div>
+            <div class="col-lg-3 text-center">
+              <div class="card border-0 bg-light">
+                <div class="card-body">
+                  <img src="../IMAGENES/almuerzo.jpg" class="img-fluid" alt="Almuerzo" width="200" height="200">
+                  <ul class="list-group list-group-flush">
+                    <button class="btn-add-cart">
+                      Comprar
+                    </button>
+                    <div class="info-product">
+                      <h6><pre style="font-size: 1rem; font-family:sans-serif; font-weight: bold;">  Almuerzo Disponibles
+  (Mostrados en inicio)</pre></h6>
+                      <p class="price">$3.000</p>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="container py-5">
@@ -403,7 +424,7 @@
       <p>© 2023, Duoc uc</p>
       <p>Todos los derechos reservados.</p>
     </footer>
-    <a href="HTML/soporte.html" class="support-button" style="background-image: url(../IMAGENES/soporte.png);"></a>
+    <a href="./soporte.html" class="support-button" style="background-image: url(../IMAGENES/soporte.png);"></a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>

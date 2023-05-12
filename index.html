@@ -18,27 +18,13 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="js/login.js"></script>
-<!--   <script>
-    $(document).ready(function() {
-      if (localStorage.getItem("firstVisit") === null) {
-        console.log("1 visita");
-        $('#cuadro').show();
-        localStorage.setItem("firstVisit", "true");
-      } else {
-        console.log("ya visitado");
-      }
-  });
-  </script> -->
-<!--   <script>
+  <script>
     $(document).ready(function() {
       var visitCount = parseInt(localStorage.getItem("visitCount")) || 0;
       visitCount++;
       localStorage.setItem("visitCount", visitCount.toString());
-      if (visitCount >= 10) {
-        $('#cuadro').show();
-      }
     });
-  </script> -->
+  </script>
   <script>
     $(window).on('beforeunload', function() {
       /* CERRAR REINICIA EL CONTADOR DE VISITA */
@@ -115,7 +101,7 @@
 
 
     <br><br>
-    <h1>Almuerzos destacados</h1>
+    <h1>Almuerzos Disponibles</h1>
     <br>
     <div class="container">
 
@@ -127,8 +113,7 @@
               <h5 class="card-title">Sopa de pollo con huevo</h5>
           </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Precio: $4000</li>
-              <li class="list-group-item">sopa de pollo con huevo duro, fideos y cilantro de agregado</li>
+              <li class="list-group-item">Sopa de pollo con huevo duro, fideos y cilantro de agregado</li>
             </ul>
           </div>
           <br><br>
@@ -141,7 +126,6 @@
               <h5 class="card-title">Cerdo al jugo con arroz</h5>
           </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Precio: $6000</li>
               <li class="list-group-item">Carne de cerdo cocinada al jugo con arroz de agregado</li>
             </ul>
           </div>
@@ -152,10 +136,9 @@
           <div class="card" style="width: 20  rem;">
             <img src="IMAGENES/ensaladita.jpeg" class="card-img-top" alt="comida duocana" width="200" height="415">
             <div class="card-body">
-              <h5 class="card-title">Ensalada natural con palta, tomate y quesillo </h5>
+              <h5 class="card-title">Ensalada Liviana </h5>
           </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Precio: $3000</li>
               <li class="list-group-item">Lechuga, quesillo en cubos, tomate, palta, pote con mezcla de aderezo (aceite, aceto y limón)</li>
             </ul>
           </div>
@@ -167,7 +150,6 @@
               <h5 class="card-title">Ensalada naturista con atún y huevo </h5>
           </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Precio: $3000</li>
               <li class="list-group-item">Ensalada con atún, huevo, tomate, lechuga y pepino</li>
             </ul>
           </div>
@@ -179,7 +161,6 @@
               <h5 class="card-title">Fideos con carne</h5>
           </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Precio: $3500</li>
               <li class="list-group-item">Fideos con carne molida y salsa de tomate</li>
             </ul>
           </div>
@@ -192,8 +173,7 @@
               <h5 class="card-title">Sandwich</h5>
           </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Precio: $1800</li>
-              <li class="list-group-item">Sandwich de pollo con lechuga y tomate</li>
+              <li class="list-group-item">2 Sandwiches de pollo con lechuga y tomate</li>
             </ul>
 
           </div>
