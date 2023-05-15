@@ -33,7 +33,7 @@ h2{
 label{
     display: block;
     font-size: 24px;
-    padding: 13px 0;
+    padding: 16px 0;
     color: #fff;
     text-shadow: 1px 1px 1px #666;
 }
@@ -71,4 +71,7 @@ footer {
 }
 label.error{ 
     color: #ff8282;
+    padding-right: 65%;
+    display: none;
+    font-size: 14px;
 }
