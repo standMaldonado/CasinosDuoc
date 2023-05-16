@@ -74,7 +74,8 @@ label.error{
     padding-right: 65%;
     display: none;
     font-size: 14px;
-    font-family: monospace;
-    
-    
+    font-family: monospace;    
+    padding-top: 0;
+    padding-bottom: 0;
+
 }
