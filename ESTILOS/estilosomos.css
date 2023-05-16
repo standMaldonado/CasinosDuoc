@@ -1,4 +1,6 @@
-
+section{
+    margin-bottom: 100px;
+}
 #titulo{
     margin-right: 39%;
     font-size: 4vw;
@@ -13,7 +15,7 @@ footer {
     text-align: center;
     font-size: 14px;
     font-family: Arial, sans-serif;
-    margin-top: 10%;
+
 } 
 .support-button{
     height: 60px;
@@ -69,14 +71,34 @@ h2{
     transition: transform 1s linear;
 } 
 .rotating {
-    animation: rotate 2s linear infinite;
+    animation: rotate .5s linear infinite;
 }
 @keyframes rotate {
     from {
       transform: rotate(0deg);
+      border-radius: 100%;
+
     }
     to {
       transform: rotate(360deg);
+      border-radius: 100%;
     }
   }
+  .rainbow {
+    animation: colorchange .3s; 
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite; 
+    animation-play-state: running;
+}
+
+@keyframes colorchange { 
+    0% { background: #ff0000; } 
+    14% { background: #ffa500; } 
+    28% { background: #ffff00; } 
+    42% { background: #008000; } 
+    56% { background: #0000ff; }
+    70% { background: #4b0082; } 
+    84% { background: #ee82ee; } 
+    100% { background: #ff0000; }
+}
 

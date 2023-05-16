@@ -3,17 +3,27 @@
     margin-right: 39%;
     font-size: 4vw;
 }
+section{
+    margin-bottom:30vh;
+}
 #palabra2{
     color: orange;
 }
 footer {
     background-color: #000000;
     color: #ffffff;
-    padding: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     font-size: 14px;
     font-family: Arial, sans-serif;
     margin-top: 15%;
+    position: absolute;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    
 } 
 .support-button{
     height: 60px;
