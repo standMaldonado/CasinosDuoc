@@ -17,9 +17,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="../js/mododiablo.js"></script>
-    <script>
-        $
-    </script>
 </head>
 
 <body>
@@ -62,8 +59,8 @@
             <div class="row">
                 <div class="col-4">
                     <div class="card" style="width: 20  rem;">
-                        <img src="../IMAGENES/andrus.jpg"id="gira1" class="card-img-top" alt="andrus maldonado" width="200"
-                            height="415">
+                        <img src="../IMAGENES/andrus.jpg"id="gira" class="card-img-top" alt="andrus maldonado" width="200"
+                            height="415"style="transition: transform 1s ease-in-out;">
                         <div class="card-body">
                             <h5 class="card-title">Andrus Maldonado</h5>
                         </div>
@@ -81,9 +78,9 @@
                 <div class="col-4">
                     <div class="card" style="width: 20  rem;">
                         <img src="../IMAGENES/andres.jpg" id="gira2" class="card-img-top" alt="andres silva" width="200"
-                            height="415">
+                            height="415"style="transition: transform 1s ease-in-out;">
                         <div class="card-body">
-                            <h5 class="card-title">Andres Silva</h5>
+                            <h5 class="card-title">Andrés Silva Ampuero</h5>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Programador</li>
@@ -97,7 +94,7 @@
                 <div class="col-4">
                     <div class="card" style="width: 20  rem;">
                         <img src="../IMAGENES/benja.jpg" id="gira3" class="card-img-top" alt="benjamin ruiz" width="200"
-                            height="415">
+                            height="415" style="transition: transform 1s ease-in-out;">
                         <div class="card-body">
                             <h5 class="card-title">Benjamín Ruiz</h5>
                         </div>
@@ -123,8 +120,8 @@
         <p>© 2023, Duoc uc</p>
         <p>Todos los derechos reservados.</p>
         <div class="switch-container">
-            <input type="checkbox" id="switch" name="checkfield" onchange="demonio(this)">
-            <label for="switch" class="lbl"></label>
+            <input type="checkbox" id="toggleCheckbox" name="checkfield" onchange="toggleRotation()">
+            <label for="toggleCheckbox" class="lbl"></label>
         </div>
     </footer>
     <a href="../HTML/soporte.html" class="support-button" style="background-image: url(../IMAGENES/soporte.png);"></a>

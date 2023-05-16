@@ -1,19 +1,16 @@
-function demonio(checkboxElem) {
-
-    const rotated = document.getElementById('gira');
-    const rotated2 = document.getElementById('gira2');
-    const rotated3 = document.getElementById('gira3');
-
-    if (checkboxElem.checked) {
-        rotated.style.transform = 'rotate(360deg)';
-        rotated.style.transition ='1s ease';
-        rotated2.style.transform = 'rotate(360deg)';
-        rotated2.style.transition ='1s ease';
-        rotated3.style.transform = 'rotate(360deg)';
-        rotated3.style.transition ='1s ease';
-
-
+  function toggleRotation() {
+    var toggleCheckbox = document.getElementById("toggleCheckbox");
+    var gira = document.getElementById("gira");
+    var gira2 = document.getElementById("gira2");
+    var gira3 = document.getElementById("gira3");
+    
+    if (toggleCheckbox.checked) {
+      gira.classList.add("rotating");
+      gira2.classList.add("rotating");
+      gira3.classList.add("rotating");
     } else {
-
+      gira.classList.remove("rotating");
+      gira2.classList.remove("rotating");
+      gira3.classList.remove("rotating");
     }
   }
