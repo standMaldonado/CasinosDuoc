@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agregar un usuario</title>
+        <link rel="stylesheet" href="{% static 'administracion.css'%}">
+    </head>
+    <body>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="agregaruser" method="post">
+                    {% csrf_token %}
+                    
+                    <pre>RUT(sin DV):                       <input type="text" name="idMascota"></pre>
+                    <pre>Nombre:                            <input type="text" name="nombreMascota"></pre>
+                    <pre>Contraseña:                  <input type="date" name="fechaNac"></pre>
+                    <pre>Raza mascota:                      <input type="text" name="razaMascota"></pre>
+                    <pre>Sexo mascota:                      <select name="sexo">
+                    {% for s in sexo %}
+                        <option value="{{s.id_sexo}}">{{s.sexo}}</option>
+                     {% endfor %}</select></pre>
+                    <input type="submit" value="Enviar">
+                </form>
+                <br></bra><a href="{% url 'index' %}">Volver a inicio</a>
+            </div>
+        </div>
+    </body>
+    <footer>  
+        <p>© 2023, Duoc uc</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+</html>

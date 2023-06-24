@@ -1,13 +1,19 @@
+function entrar(){
+    event.preventDefault();
 
+    var nom = document.getElementById("nom").value;
+    var con = document.getElementById("con").value;
+    var modal = document.getElementById('cuadro');
+    
 
-if (nom === "admin" && con=== "admin") {
-    modal.style.display = "none";
-    btnAdministrar.disabled = false;
-    console.log("bueno")
-}else{
-    console.log("malo")
-    modal.style.display = "none";
-    btnAdministrar.disabled = true;
+    if (nom === "admin" && con=== "admin") {
+        modal.style.display = "none";
+        btnAdministrar.disabled = false;
+    }else{
+        modal.style.display = "none";
+        btnAdministrar.disabled = true;
+    }
+    
 }
 
 

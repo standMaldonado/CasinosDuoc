@@ -9,7 +9,7 @@ body{
 }
 
 .main{
-    background: url("images/Comida-típica-de-India-_-10-Platos-Imprescindibles.jpg") ;
+    background: url('/static/images/Comida-típica-de-India-_-10-Platos-Imprescindibles.jpg') ;
     background-size: cover;
     height: 20%;
     background-position: 50%;
