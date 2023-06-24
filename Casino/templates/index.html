@@ -30,7 +30,7 @@
   </script>
   <script>
     $(document).ready(function() {
-      $('body').animate({ opacity: 1 }, 800); // Animación de opacidad durante 1 segundo
+      $('body').animate({ opacity: 1 }, 300); // Animación de opacidad durante 1 segundo
     });
   </script>
     <script>
@@ -41,14 +41,6 @@
         document.getElementById("myModal").style.display = "none";
       }
     </script>
-  <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
-    }
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-  </script>
 </head>
 
 <body>
@@ -60,16 +52,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="menu/">Menú</a>
+              <a class="nav-link" href="{% url 'menu' %}">Menú</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="mi_perfil">Mi cuenta</a>
+              <a class="nav-link" href="{% url 'mi_perfil' %}">Mi cuenta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/somos">Quiénes somos</a>
+              <a class="nav-link" href="{% url 'somos' %}">Quiénes somos</a>
             </li>
           </ul>
         </div>
