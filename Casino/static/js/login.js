@@ -9,8 +9,12 @@ function entrar(){
 
     if (nom === "admin" && con=== "admin") {
         modal.style.display = "none";
+        btnAdministrar.disabled = false;
+        console.log("bueno")
     }else{
-        alert("Los datos ingresados no son los correctos... ");
+        console.log("malo")
+        modal.style.display = "none";
+        btnAdministrar.disabled = true;
     }
     
 }
