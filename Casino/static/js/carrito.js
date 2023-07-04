@@ -121,3 +121,41 @@ function comprado(){
     })
     
 }
+
+// Función para traducir el texto utilizando la API de Google Cloud Translation
+function traducirTexto(texto, idiomaDestino) {
+    const apiKey = 'AIzaSyD1DMEtsW9Uw1TkYB8ZKDVIu4XiGphn5Fg';
+  
+    return $.ajax({
+      url: `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`,
+      type: 'POST',
+      data: {
+        q: texto,
+        target: idiomaDestino
+      },
+      dataType: 'json'
+    });
+  }
+  
+  // Función para actualizar el contenido de la página con la traducción
+  function actualizarPagina(traduccion) {
+    $('body').html(traduccion);
+    
+    // Vuelve a vincular las funciones JavaScript después de actualizar el contenido
+    $.getScript("carrito.js");
+  }
+  
+  // Evento clic del botón para iniciar la traducción
+  $('#btnTraducir').click(function() {
+    const textoPagina = $('body').html();
+  
+    traducirTexto(textoPagina, 'en')
+      .done(function(data) {
+        const traduccion = data.data.translations[0].translatedText;
+        actualizarPagina(traduccion);
+      })
+      .fail(function(error) {
+        console.error('Error:', error);
+      });
+  });
+  
