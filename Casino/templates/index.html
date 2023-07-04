@@ -17,19 +17,6 @@
   <script src="{% static 'js/login.js' %}"></script>
   <script>
     $(document).ready(function() {
-      var visitCount = parseInt(localStorage.getItem("visitCount")) || 0;
-      visitCount++;
-      localStorage.setItem("visitCount", visitCount.toString());
-    });
-  </script>
-  <script>
-    $(window).on('beforeunload', function() {
-      /* CERRAR REINICIA EL CONTADOR DE VISITA */
-      localStorage.removeItem("visitCount");
-    });
-  </script>
-  <script>
-    $(document).ready(function() {
       $('body').animate({ opacity: 1 }, 300); // Animación de opacidad durante 1 segundo
     });
   </script>

@@ -109,7 +109,7 @@ const showHTML = () => {
     
 }
 window.onclick = function(event) {
-    var cuadro = document.getElementsByClassName('container-cart-products')[0];
+    var cuadro = document.getElementsByClassName('container-cart-products')
     if (event.target == cuadro) {
         cuadro.style.display = "none";
     }
