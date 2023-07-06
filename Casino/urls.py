@@ -8,4 +8,5 @@ urlpatterns= [
     path('mi_perfil/', views.mi_perfil, name='mi_perfil'),
     path("somos/", views.somos, name='somos'),
     path("soporte/", views.soporte, name='soporte'),
+    
 ]

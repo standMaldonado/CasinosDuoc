@@ -61,23 +61,23 @@
       </div>
     </nav>
   </header>
-  <section >
+  <section name="ADMINISTRACION">
     <div id="myModal" class="modal">
-      <div id="modal-content"class="modal-content">
+      <div id="modal-content"class="modal-content" style="height: 421.6px;">
         <span class="close" onclick="closeModal()">&times;</span>
         <h3 id="tituloadministracion">Administrar</h3>
-        <button class="admboton">Agregar usuario</button>
+        <button class="admboton"><a class="admlink" href="{% url 'usuarios:agregar' %}">Agregar usuario</a></button>
         <br>
-        <button class="admboton">Eliminar usuario</button>
+        <button class="admboton"><a class="admlink" href="{% url 'usuarios:eliminar' %}">Eliminar usuario</a></button>
         <br>
-        <button class="admboton">Modificar usuario</button>
+        <button class="admboton"><a class="admlink" href="{% url 'usuarios:modificar' %}">Modificar usuario</a></button>
         <br>
-        <button class="admboton">Mostrar usuario</button>
+        <button class="admboton"><a class="admlink" href="{% url 'usuarios:ver' %}">Ver usuarios</a></button>
         <br><br><br><br>
       </div>
     </div>
   </section>
-  <section>
+  <section name="LOGIN DE LA PAGINA">
     <div id="cuadro" class="modal" style="display: none;">
       <form id="formm" class="modal-content animate" method="post" style="width: 901.6px;">
         <div class="imagen">

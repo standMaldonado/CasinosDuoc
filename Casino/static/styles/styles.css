@@ -83,6 +83,10 @@ span.contra {
     float: right;
     padding-top: 16px;
 }
+
+    
+
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -101,7 +105,7 @@ span.contra {
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-    overflow: auto !important; 
+    overflow: auto ; 
     position: fixed
   }
 
@@ -134,6 +138,8 @@ span.contra {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 0px;
+  overflow: hidden;
 }
 
 #modal-content {
@@ -141,10 +147,38 @@ span.contra {
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 600px;
+  max-width: 600px;
+  width: 90%;
   text-align: center;
   position: relative;
 }
+
+@media screen and (max-width: 768px) {
+    #modal-content {
+      margin: 10% auto;
+      padding: 10px;
+      max-width: 90%;
+    }
+  }
 #tituloadministracion{
   font-size: 30px;
+}
+
+.admlink{
+    outline: none;
+    text-decoration: none; 
+    color: rgb(74, 74, 74);
+}
+
+.admlink:hover{
+    color: black;
+}
+
+.admboton{
+    background-color: rgb(245, 186, 77);
+    height: 55px;
+}
+
+.admboton:hover{
+    background-color: rgb(255, 166, 0);
 }

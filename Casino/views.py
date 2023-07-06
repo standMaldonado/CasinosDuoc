@@ -14,3 +14,4 @@ def somos(request):
 
 def soporte(request):
     return render(request, 'soporte.html')
+
