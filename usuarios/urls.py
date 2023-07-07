@@ -8,5 +8,6 @@ urlpatterns= [
     path('eliminar/', views.eliminar, name='eliminar'),
     path('ver/', views.ver, name='ver'),
     path('modificar/', views.modificar, name='modificar'),
-    path('agregar/', views.agregar, name='agregar'),
+    path('agregaruser/', views.agregaruser, name='agregaruser'),
+    
 ]
