@@ -20,7 +20,17 @@ def modificaruser(request):
         rut = request.POST["rut"]
         usuario = USUARIO.objects.get(rut=rut)
         ciudades = CIUDAD.objects.all()
-        usuario.nombre = request.POST["nombre"]
+        nombre = request.POST["nombre"]
+        if USUARIO.objects.filter(nombre=nombre).exclude(rut=rut).exists():
+            context = {
+                'usuarios': USUARIO.objects.all(),
+                'nombre_ciudad': ciudades,
+                'usuario': usuario,
+                'error_message': 'El nombre ya existe en la base de datos.'
+            }
+            return render(request, 'modificaruser.html', context)
+
+        usuario.nombre = nombre
         usuario.contra = request.POST["contra"]
         nombre_ciudad = request.POST.get("nombre_ciudad")
         usuario.saldo = request.POST["saldo"]
@@ -54,7 +64,7 @@ def modificaruser(request):
 def veruser(request):
     if request.method == "POST":
         nombre = request.POST.get('nombre')
-        usuarios = USUARIO.objects.filter(nombre__icontains=nombre)
+        usuarios = USUARIO.objects.filter(nombre=nombre)
         if usuarios.exists():
             context = {'usuario': usuarios}
             return render(request, 'veruser.html', context)
@@ -79,11 +89,15 @@ def agregaruser(request):
     elif request.method == "POST":
         rut = request.POST["rut"]
         nombre = request.POST["nombre"]
+
         contra = request.POST["contra"]
         id_ciudad = request.POST["nombre_ciudad"]
         saldo = request.POST["saldo"]
         correo = request.POST["correo"]
-        activo = "1"
+        if USUARIO.objects.filter(nombre=nombre).exists():
+            ciudades = CIUDAD.objects.all()
+            context = {'nombre_ciudad': ciudades, 'error_message': 'El nombre ya existe en la base de datos.'}
+            return render(request, 'agregaruser.html', context)
 
         objCiudad = CIUDAD.objects.get(id_ciudad=id_ciudad)
         obj = USUARIO.objects.create(rut=rut,

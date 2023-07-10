@@ -1,12 +1,15 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar datos de un usuario</title>
+    <link rel="stylesheet" href="{% static 'styles/modificar.css'%}">
 </head>
 <body>
     <h1>Modificar datos de un usuario</h1>
+    <a href="{% url 'Casino:index'%}?nom=admin&con=admin" class="volver" style="background-image: url('{% static 'images/volver.png' %}');"></a>
 
     <form action="../modificaruser/" method="post" onsubmit="submitForm(event)">
         {% csrf_token %}
@@ -16,24 +19,25 @@
                 <option value="{{ user.rut }}" data-nombre="{{ user.nombre }}" data-contra="{{ user.contra }}" data-ciudad="{{ user.id_ciudad }}" data-saldo="{{ user.saldo }}" data-correo="{{ user.correo }}">{{ user.rut }}</option>
             {% endfor %}
         </select>
+        <button type="button" id="seleccionButton">Seleccionar un rut</button>
     
         {% if usuario is defined %}
             <input type="hidden" name="rut_text" value="{{ usuario.rut }}">
         {% endif %}
     
-        <pre>RUT:                        <input readonly type="text" name="rut_text" id="rut_text" value="{{ usuario.rut|default_if_none:'' }}" ></pre>
-        <pre>Nombre:                    <input type="text" name="nombre" id="nombre" value="{{ usuario.nombre|default_if_none:'' }}"></pre>
-        <pre>Contra:                    <input type="text" name="contra" id="contra" value="{{ usuario.contra|default_if_none:'' }}"></pre>
-        <pre>Ciudad:                    <select name="nombre_ciudad" id="nombre_ciudad">
+        <p>RUT:                        <input readonly type="text" name="rut_text" id="rut_text" value="{{ usuario.rut|default_if_none:'' }}" ></p>
+        <p>Nombre:                    <input type="text" name="nombre" id="nombre" value="{{ usuario.nombre|default_if_none:'' }}"></p>
+        <p>Contra:                    <input type="text" name="contra" id="contra" value="{{ usuario.contra|default_if_none:'' }}"></p>
+        <p>Ciudad:                    <select name="nombre_ciudad" id="nombre_ciudad">
             {% for ciudad in nombre_ciudad %}
                 <option value="{{ ciudad.nombre_ciudad }}">{{ ciudad.nombre_ciudad }}</option>  
             {% endfor %}
-        </select></pre>
-        <pre>Saldo:                     <input type="text" name="saldo" id="saldo" value="{{ usuario.saldo|default_if_none:'' }}"></pre>
-        <pre>Correo:                    <input type="text" name="correo" id="correo" value="{{ usuario.correo|default_if_none:'' }}"></pre>
+        </select></p>
+        <p>Saldo:                     <input type="text" name="saldo" id="saldo" value="{{ usuario.saldo|default_if_none:'' }}"></p>
+        <p>Correo:                    <input type="text" name="correo" id="correo" value="{{ usuario.correo|default_if_none:'' }}"></p>
 
-        <input type="submit" name="opcion" value="Actualizar datos">
-        <button type="button" id="seleccionButton">Seleccionar</button>
+        <input type="submit" name="opcion" value="Actualizar datos" onclick="showAlert()">
+        
     </form>
 
     <script>
@@ -86,7 +90,21 @@
         });
     });
     </script>
-    <a href="{% url 'Casino:index'%}?nom=admin&con=admin" onclick="">Volver</a> 
-    
+    <script>
+        function showAlert() {
+          alert("Datos modificados !");
+        }
+    </script>
+    <script>
+        {% if error_message %}
+            window.onload = function() {
+                alert("{{ error_message }}");
+            }
+        {% endif %}
+    </script>
 </body>
+<footer>  
+    <p>© 2023, Duoc uc</p>
+    <p>Todos los derechos reservados.</p>
+</footer>
 </html>

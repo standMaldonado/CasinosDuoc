@@ -5,32 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar un usuario</title>
-    <link rel="stylesheet" href="{% static 'administracion.css'%}">
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+    <link rel="stylesheet" href="{% static 'styles/agregar.css'%}">
 </head>
 <body>
+    <a href="{% url 'Casino:index'%}?nom=admin&con=admin" class="volver" style="background-image: url({% static 'images/volver.png' %});"></a>
     <form action="../agregaruser/" method="post">
         {% csrf_token %}
         
-        <pre>RUT:                       <input type="text" name="rut"></pre>
-        <pre>Nombre:                            <input type="text" name="nombre"></pre>
-        <pre>Contraseña:                  <input type="text" name="contra"></pre>
-        <pre>Ciudad:                      <select name="nombre_ciudad">
-            {% for ciudad in nombre_ciudad %}
-                <option value="{{ ciudad.id_ciudad }}" {% if ciudad.id_ciudad == selected_ciudad %}selected{% endif %}>{{ ciudad.nombre_ciudad }}</option>
-            {% endfor %}
-        </select></pre>
-        <pre>Saldo:                      <input type="text" name="saldo"></pre>
-        <pre>Correo:                     <input type="text" name="correo"></pre>
+        <p>RUT: <input type="text" name="rut" required></p>
+        <p>Nombre: <input type="text" name="nombre" required></p>
+        <p>Contraseña: <input type="text" name="contra" required></p>
+        <p>Ciudad:
+            <select name="nombre_ciudad" required>
+                {% for ciudad in nombre_ciudad %}
+                    <option value="{{ ciudad.id_ciudad }}" {% if ciudad.id_ciudad == selected_ciudad %}selected{% endif %}>{{ ciudad.nombre_ciudad }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <p>Saldo: <input type="text" name="saldo" required></p>
+        <p>Correo: <input type="text" name="correo" required></p>
         
         <input type="submit" name="opcion" value="Enviar">
+  
     </form>
-    <a href="{% url 'Casino:index'%}?nom=admin&con=admin" onclick="">Volver</a> 
     
+    <script>
+        function showAlert() {
+            alert("Datos guardados !");
+        }
+        
+        document.querySelector("form").addEventListener("submit", function(event) {
+            if (document.querySelectorAll("input:invalid").length > 0) {
+                event.preventDefault(); 
+                alert("Por favor, complete todos los campos requeridos.");
+            }
+        });
+    </script>
+    <script>
+        {% if error_message %}
+            window.onload = function() {
+                alert("{{ error_message }}");
+            }
+        {% endif %}
+    </script>
 </body>
 <footer>  
     <p>© 2023, Duoc uc</p>

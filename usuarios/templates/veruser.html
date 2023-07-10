@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="{% static 'js/administracion.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'styles/ver.css' %}">
 </head>
 <body>
+    <a href="{% url 'Casino:index'%}?nom=admin&con=admin" class="volver" style="background-image: url({% static 'images/volver.png' %});"></a>
     <button id="btnAdministrar" style="display: none;"></button>
     <div id="cuadro"></div>
     <h1>USUARIOS</h1>
@@ -16,6 +18,7 @@
         <input type="text" name="nombre" placeholder="Ingrese nombre">
         <button type="submit">Buscar</button>
     </form>
+    <div style="background-color: rgba(240, 248, 255, 0.671);">
     {% for m in usuario %}
         
         <br>- RUT: {{m.rut}}<br>
@@ -26,8 +29,11 @@
         - Correo: {{m.correo}}<br>
     {% empty %}
         <h4>No se encontraron usuarios</h4>
-    {% endfor %}
-    <a href="{% url 'Casino:index'%}?nom=admin&con=admin" onclick="">Volver</a> 
+    {% endfor %}</div>
     
 </body>
+<footer>  
+    <p>© 2023, Duoc uc</p>
+    <p>Todos los derechos reservados.</p>
+</footer>
 </html>
