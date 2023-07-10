@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </head>
 <body>
-    hola
+    <form action="../eliminaruser/" method="post">
+        {% csrf_token %}
+        
+        <label for="nombre">Selecciona un nombre:</label>
+        <select name="nombre" id="nombre">
+            {% for usuario in usuarios %}
+                <option value="{{ usuario.nombre }}">{{ usuario.nombre }}</option>
+            {% endfor %}
+        </select>
+        
+        <input type="submit" name="opcion" value="Eliminar">
+    </form>
+    <a href="{% url 'Casino:index'%}?nom=admin&con=admin" onclick="">Volver</a> 
+    
 </body>
 </html>

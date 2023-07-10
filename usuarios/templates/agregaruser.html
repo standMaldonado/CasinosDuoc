@@ -20,8 +20,8 @@
         <pre>Nombre:                            <input type="text" name="nombre"></pre>
         <pre>Contraseña:                  <input type="text" name="contra"></pre>
         <pre>Ciudad:                      <select name="nombre_ciudad">
-            {% for s in nombre_ciudad %}
-                <option value="{{s.idciudad}}">{{s.nombre_ciudad}}</option>
+            {% for ciudad in nombre_ciudad %}
+                <option value="{{ ciudad.id_ciudad }}" {% if ciudad.id_ciudad == selected_ciudad %}selected{% endif %}>{{ ciudad.nombre_ciudad }}</option>
             {% endfor %}
         </select></pre>
         <pre>Saldo:                      <input type="text" name="saldo"></pre>
@@ -29,7 +29,8 @@
         
         <input type="submit" name="opcion" value="Enviar">
     </form>
-    <br><br><a href="#" onclick="goBack()">Volver a Administración</a>
+    <a href="{% url 'Casino:index'%}?nom=admin&con=admin" onclick="">Volver</a> 
+    
 </body>
 <footer>  
     <p>© 2023, Duoc uc</p>

@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class USUARIO(models.Model):
     rut = models.CharField( max_length=9,primary_key=True)
-    nombre = models.CharField(max_length=30,blank=False,null=False)
+    nombre = models.CharField(max_length=30,blank=False,null=False, unique=True)
     contra = models.CharField(max_length=30,blank=False,null=False)
     id_ciudad = models.ForeignKey('Ciudad',on_delete=models.CASCADE, db_column='idciudad')
     saldo = models.CharField(max_length=6)

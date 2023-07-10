@@ -5,9 +5,9 @@ from . import views
 app_name = 'usuarios'
 
 urlpatterns= [
-    path('eliminar/', views.eliminar, name='eliminar'),
-    path('ver/', views.ver, name='ver'),
-    path('modificar/', views.modificar, name='modificar'),
+    path('eliminaruser/', views.eliminaruser, name='eliminaruser'),
+    path('veruser/', views.veruser, name='veruser'),
+    path('modificaruser/', views.modificaruser, name='modificaruser'),
     path('agregaruser/', views.agregaruser, name='agregaruser'),
     
 ]
