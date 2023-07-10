@@ -13,7 +13,9 @@
     </script>
 </head>
 <body>
+    
     <a href="{% url 'Casino:index'%}?nom=admin&con=admin" class="volver" style="background-image: url({% static 'images/volver.png' %});"></a>
+    <h1>Eliminar un usuario</h1>
     <form action="../eliminaruser/" method="post">
         {% csrf_token %}
         

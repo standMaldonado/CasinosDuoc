@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'styles/agregar.css'%}">
 </head>
 <body>
+    <h1>Agregar un usuario</h1>
     <a href="{% url 'Casino:index'%}?nom=admin&con=admin" class="volver" style="background-image: url({% static 'images/volver.png' %});"></a>
     <form action="../agregaruser/" method="post">
         {% csrf_token %}

@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{% static 'styles/modificar.css'%}">
 </head>
 <body>
-    <h1>Modificar datos de un usuario</h1>
+    
     <a href="{% url 'Casino:index'%}?nom=admin&con=admin" class="volver" style="background-image: url('{% static 'images/volver.png' %}');"></a>
-
+    <h1>Modificar datos de un usuario</h1>
     <form action="../modificaruser/" method="post" onsubmit="submitForm(event)">
         {% csrf_token %}
     
