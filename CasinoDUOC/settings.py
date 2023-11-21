@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'CasinoDUOC.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mecanico',
+        'USER':'root',
+        'PASSWORD':'1234567',
+        'HOST':'localhost',
+        'PORT':'3306'
     }
 }
 
