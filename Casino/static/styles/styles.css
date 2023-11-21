@@ -30,10 +30,10 @@ h1{
     color: orange;
 }
 footer {
-    background-color: #000000;
+    background-color: rgb(52, 135, 245);
     color: #ffffff;
     padding: 20px;
-    text-align: center;
+    text-align: left;   
     font-size: 14px;
     font-family: Arial, sans-serif;
 }
@@ -84,7 +84,9 @@ span.contra {
     padding-top: 16px;
 }
 
-    
+.card-title {
+    text-align: center;
+} 
 
 
 .modal {
@@ -175,10 +177,10 @@ span.contra {
 }
 
 .admboton{
-    background-color: rgb(245, 186, 77);
+    background-color: rgb(52, 135, 245);
     height: 55px;
 }
 
 .admboton:hover{
-    background-color: rgb(255, 166, 0);
+    background-color: rgb(52, 135, 245);
 }
