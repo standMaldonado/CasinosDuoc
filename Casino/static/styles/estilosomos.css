@@ -8,7 +8,7 @@
     color: orange;
 }
 footer {
-    background-color: #000000;
+    background-color: rgb(52, 135, 245);
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -100,3 +100,20 @@ h2{
     84% { background: #ee82ee; } 
     100% { background: #ff0000; }
 }
+.custom-carousel {
+    width: 90%;
+    height: 400px;
+    margin: 0 auto; 
+    display: block; 
+  }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 15px;
+  width: 15px;
+}
+
+.custom-button {
+    width: 30px;
+    height: 100px;
+  }

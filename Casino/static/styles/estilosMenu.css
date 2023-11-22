@@ -38,7 +38,7 @@ box-shadow: -2px 1px 25px 4px rgba(0,0,0,0.75);
 transition: 0.5s;
 }
 footer {
-    background-color: #000000;
+    background-color: rgb(52, 135, 245);
     color: #ffffff;
     padding: 20px;
     text-align: center;

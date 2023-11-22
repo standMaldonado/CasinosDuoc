@@ -25,16 +25,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'Casino:index' %}">Inicio</a>
+              <a class="nav-link "  href="{% url 'Casino:index' %}">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'Casino:menu' %}">Menú</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'Casino:menu' %}">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'Casino:mi_perfil' %}">Mi cuenta</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'Casino:somos' %}">Quiénes somos</a>
+              <a class="nav-link" href="{% url 'Casino:mi_perfil' %}">Servicios</a>
             </li>
           </ul>
         </div>
@@ -47,379 +44,55 @@
   </nav>
   </header>
 
-  <section class="main">
-    <div class="container py-5 "><br><br><br><br>
+  <section class="main" style="background-image: url('{% static 'images/autos-mantencion.jpg' %}'); background-size: cover;">
+    <div class="container py-5" ><br><br><br><br>
           <div class="container" id="bloque">
-            <h1 id="nuestro">Nuestro menú en CasinosDuoc!</h1>
+            <h1 id="nuestro">Los mejores productos de la galaxia!</h1>
       </div>
       <br><br><br><br>
     </div>
   </section>
+
+
   <section class="producto">
     <div class="container py-5">
       <div class="row py-5 m-auto text-center">
         <div class="col-lg-5 ">
-          <h1>Nuestras comidas</h1>
-          <h6 style="color: orange; text-align: left; margin-left: 19%;">Disponibles en DUOCUC</h6>
-        </div>
-
-      </div>
-      <div class="container-icon" style="width: 50px;">
-        <div class="container-cart-icon">
-          <img src="{% static 'images/carrito.png' %}" alt="carrito" class="icon-cart">
-          <div class="count-products">
-            <span id="contador-productos">0</span>
-          </div>
-        </div>
-        <div class="container-cart-products hidden-cart">
-          <div class="row-product">
-            <div class="cart-product">
-              <div class="info-cart-product">
-                <span class="cantidad-producto-carrito"></span>
-                <p class="titulo-producto-carrito"></p>
-                <span class="precio-producto-carrito"></span>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="icon-close" alt="equis">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </div>
-          </div>
-
-          <div class="carttotal">
-            <h3>Total:</h3>
-            <span class="total-pagar">$0</span>
-            <a class="btn btn-dark" id="boton_comprar" onclick="comprado()" href="{% url 'Casino:index' %}">Comprar</a>
-          </div>
+          <h1>Nuestras productos</h1>
+          <h6 style="color: blue; text-align: left; margin-left: 19%;">Disponibles en ServiExpress</h6>
         </div>
       </div>
-      </br>
-      </br>
 
-      <div class="item">
-        <div class="container-items">
-          <div class="row">
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/PolloQueso.jpg' %}" class="img-fluid" alt="PolloQueso">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Empanada pollo queso</h6>
-                      <p class="price">$1.700</p>
+<br>	<br>
 
-                    </div>
-
-                  </ul>
-                </div>
-              </div>
-
-
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/hvegana.jpg' %}" class="img-fluid" alt="hamburgesa vegana">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Hamburguesa vegana</h6>
-                      <p class="price">$3.000</p>
-                    </div>
-
-                  </ul>
-                </div>
-              </div>
-
-
-
-
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/empanada de carne.jpg' %}" class="img-fluid" alt="empanada de carne">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Empanada de carne</h6>
-                      <p class="price">$2.000</p>
-                    </div>
-
-                  </ul>
-
-                </div>
-
-              </div>
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/Completo_italiano.jpg' %}" class="img-fluid" alt="Completo_italiano">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Completo italiano</h6>
-                      <p class="price">$1.000</p>
-                    </div>
-
-                  </ul>
-                </div>
-              </div>
-
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/napolitana.jpg' %}" class="img-fluid" alt="napolitana">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Empanada napolitana</h6>
-                      <p class="price">1.700</p>
-                    </div>
-
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/cachito.jpg' %}" class="img-fluid" alt="cachito">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Cachito relleno de manjar</h6>
-                      <p class="price">$800</p>
-                    </div>
-
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/muffin.jpg' %}" class="img-fluid" alt="muffin">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Muffin</h6>
-                      <p class="price">$1.200</p>
-                    </div>
-
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/empanaita-queso.jpg' %}" class="img-fluid" alt="empanaita-queso" width="200"
-                    height="135">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Empanada de queso</h6>
-                      <p class="price">$1.200</p>
-                    </div>
-
-                  </ul>
-                </div>
-              </div>
-
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/Milcaito.jpg' %}" class="img-fluid" alt="Milcaito" width="200" height="150">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6>Milcaos</h6>
-                      <p class="price">$1.000</p>
-                    </div>
-
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-lg-3 text-center">
-              <div class="card border-0 bg-light">
-                <div class="card-body">
-                  <img src="{% static 'images/almuerzo.jpg' %}" class="img-fluid" alt="Almuerzo" width="200" height="200">
-                  <ul class="list-group list-group-flush">
-                    <button class="btn-add-cart">
-                      Comprar
-                    </button>
-                    <div class="info-product">
-                      <h6><pre style="font-size: 1rem; font-family:sans-serif; font-weight: bold;">  Almuerzo Disponibles
-  (Mostrados en inicio)</pre></h6>
-                      <p class="price">$3.000</p>
-                    </div>
-                  </ul>
-                </div>
+      <div class="row">
+        {% for producto in productos %}
+          <div class="col-sm-4">
+            <div class="card">
+              {% if producto.IMAGEN %}
+                <img src="{{ producto.IMAGEN.url }}" width="100" height="200" class="card-img-top" alt="{{ producto.NOM_PRODUCTO }}">
+              {% endif %}
+              <div class="card-body">
+                <h5 class="card-title">{{ producto.NOM_PRODUCTO }}</h5>
+                <p class="card-text">{{ producto.DESCRIPCION }}</p>
+                <p class="card-text">Precio: ${{ producto.PRECIO }}</p>
+                <a href="{% url 'Casino:producto' producto.ID_PRODUCTO %}" class="btn btn-primary">Comprar</a>
               </div>
             </div>
           </div>
-
-          <div class="container py-5">
-            <div class="row py-5 m-auto text-center">
-              <div class="col-lg-5 ">
-                <h1>Nuestras Bebidas</h1>
-                <h6 style="color: orange;text-align: left; margin-left: 20%;">Disponibles en DUOCUC</h6>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light">
-                  <div class="card-body">
-                    <img src="{% static 'images/coquita.png' %}" class="img-fluid" alt="cocacola" width="200" height="200">
-                    <ul class="list-group list-group-flush">
-                      <button class="btn-add-cart">
-                        Comprar
-                      </button>
-                      <div class="info-product">
-                        <h6>Coca-cola 500cc</h6>
-                        <p class="price">$1.200</p>
-                      </div>
-
-                    </ul>
-                  </div>
-                </div>
-
-
-              </div>
-              <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light">
-                  <div class="card-body">
-                    <img src="{% static 'images/fantita.jpg' %}" class="img-fluid" alt="fantita" width="200" height="200">
-                    <ul class="list-group list-group-flush">
-                      <button class="btn-add-cart">
-                        Comprar
-                      </button>
-                      <div class="info-product">
-                        <h6>Fanta 500cc</h6>
-                        <p class="price">$1.200</p>
-                      </div>
-
-                    </ul>
-                  </div>
-                </div>
-
-
-              </div>
-              <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light">
-                  <div class="card-body">
-                    <img src="{% static 'images/sprite.png' %}" class="img-fluid" alt="sprite" width="200" height="200">
-                    <ul class="list-group list-group-flush">
-                      <button class="btn-add-cart">
-                        Comprar
-                      </button>
-                      <div class="info-product">
-                        <h6>Sprite 500cc</h6>
-                        <p class="price">$1.200</p>
-
-                      </div>
-
-                    </ul>
-                  </div>
-                </div>
-
-
-              </div>
-              <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light">
-                  <div class="card-body">
-                    <img src="{% static 'images/jugito.png' %}" class="img-fluid" alt="jugito" width="150" height="200">
-                    <ul class="list-group list-group-flush">
-                      <button class="btn-add-cart">
-                        Comprar
-                      </button>
-                      <div class="info-product">
-                        <h6>Jugo de durazno Andina</h6>
-                        <p class="price">$1.000</p>
-                      </div>
-
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light">
-                  <div class="card-body">
-                    <img src="{% static 'images/cafesito.png' %}" class="img-fluid" alt="cafesito" width="150" height="200">
-                    <ul class="list-group list-group-flush">
-                      <button class="btn-add-cart">
-                        Comprar
-                      </button>
-                      <div class="info-product">
-                        <h6>Café</h6>
-                        <p class="price">$1.200</p>
-                      </div>
-
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light">
-                  <div class="card-body">
-                    <img src="{% static 'images/aguita.png' %}" class="img-fluid" alt="aguita" width="200" height="200">
-                    <ul class="list-group list-group-flush">
-                      <button class="btn-add-cart">
-                        Comprar
-                      </button>
-                      <div class="info-product">
-                        <h6>Agua vital</h6>
-                        <p class="price">$900</p>
-                      </div>
-
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <br>
+        {% endfor %}
+        </div>        
       </div>
-    </div>
-    <footer>
-      <p>© 2023, Duoc uc</p>
-      <p>Todos los derechos reservados.</p>
-    </footer>
+
+      <footer>
+        <span>Contacto</span>  
+        <p> Acario Cotapos 3055, Alerce, Chile</p>
+        <p> Taller@Serviexpress.cl</p>
+        <p>+56946224990</p>
+        <p>© 2023, ServiExpress</p>
+        <p>Todos los derechos reservados.</p>
+      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
