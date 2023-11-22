@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from usuarios.models import USUARIO
+from mecanico.models import Producto
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -8,8 +9,8 @@ def index(request):
     return render(request, 'index.html')
 
 def menu(request):
-    return render(request, 'menu.html')
-
+    productos = Producto.objects.all()
+    return render(request, 'menu.html', {'productos': productos})
 def mi_perfil(request):
     return render(request, 'mi_perfil.html')
 
