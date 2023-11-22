@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Casino',
     'usuarios',
+    'mecanico',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mecanico',
         'USER':'root',
-        'PASSWORD':'1234',
+        'PASSWORD':'1234567',
         'HOST':'localhost',
         'PORT':'3306'
     }
