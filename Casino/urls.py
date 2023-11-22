@@ -6,8 +6,9 @@ app_name = 'Casino'
 urlpatterns= [
     path('', views.index, name='index'),
     path("productos/", views.menu, name='menu'),
-    path('Servicios/', views.mi_perfil, name='mi_perfil'),
-    path("somos/", views.somos, name='somos'),
+    path('servicios/', views.mi_perfil, name='mi_perfil'),
+    path('producto/<str:id_producto>/', views.somos, name='producto'),
     path("soporte/", views.soporte, name='soporte'),
+
     
 ]
