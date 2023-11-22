@@ -66,15 +66,15 @@
   <section name="ADMINISTRACION">
     <div id="myModal" class="modal">
       <div id="modal-content"class="modal-content" style="height: 421.6px;">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close" onclick="closeModal()">&times;</span> 
         <h3 id="tituloadministracion">Administrar</h3>
-        <button class="admboton"><a class="admlink" href="{% url 'usuarios:agregaruser' %}">Agregar usuario</a></button>
+        <button class="admboton"><a class="admlink" href="{% url 'mecanico:mecanico_agregar' %}">Agregar usuario</a></button>
         <br>
-        <button class="admboton"><a class="admlink" href="{% url 'usuarios:eliminaruser' %}">Eliminar usuario</a></button>
+        <button class="admboton"><a class="admlink" href="{% url 'mecanico:mecanico_eliminar' %}">Eliminar usuario</a></button>
         <br>
-        <button class="admboton"><a class="admlink" href="{% url 'usuarios:modificaruser' %}">Modificar usuario</a></button>
+        <button class="admboton"><a class="admlink" href="{% url 'mecanico:mecanico_modificar' %}">Modificar usuario</a></button>
         <br>
-        <button class="admboton"><a class="admlink" href="{% url 'usuarios:veruser' %}">Ver usuarios</a></button>
+        <button class="admboton"><a class="admlink" href="{% url 'mecanico:mecanico_ver' %}">Ver usuarios</a></button>
         <br><br><br><br>
       </div>
     </div>
@@ -188,7 +188,7 @@
     </br>
   </section>
   <footer>
-    <span>Contacto</span>  
+    <span color="black">Contacto</span>  
     <p> Acario Cotapos 3055, Alerce, Chile</p>
     <p> Taller@Serviexpress.cl</p>
     <p>+56946224990</p>

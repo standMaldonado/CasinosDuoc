@@ -56,11 +56,6 @@ def modificaruser(request):
         }
         return render(request, 'modificaruser.html', context)
 
-
-
-
-
-
 def veruser(request):
     if request.method == "POST":
         nombre = request.POST.get('nombre')

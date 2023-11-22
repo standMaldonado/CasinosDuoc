@@ -13,6 +13,12 @@ class Usuario(models.Model):
     CORREO = models.EmailField(max_length=200)
     NRO_TELEFONICO = models.CharField(max_length=20)
     
+    def __str__(self):
+        fila= "Run: "+ str(self.RUN) + "-" + "Nombre: " + self.PNOMBRE + " " + self.SNOMBRE
+        return fila
+    
+    def delete(self, using=None, keep_parents=False):
+        super().delete(using, keep_parents)
 
 class Administrador(models.Model):
     ID_ADMINISTRADOR = models.IntegerField(primary_key=True)

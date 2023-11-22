@@ -1,29 +1,20 @@
+option {
+  color: black;
+}
+
 body {
-  background-color: #d0d0d0;
-  background-size: cover;
-  background-position: center;
+    background-color: #d0d0d0;
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
   }
   
-  h1 {
-    text-align: center;
-    margin-top: 30px;
-  }
   
-  form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  p {
+  label {
+    display: block;
     margin-bottom: 10px;
   }
   
-  input[type="text"],
   select {
     width: 100%;
     padding: 10px;
@@ -32,15 +23,13 @@ body {
     box-sizing: border-box;
   }
   
-  input[type="submit"],
-  button {
-    background-color: #3487f5;
+  input[type="submit"] {
+    background-color: #af4c4c;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
   }
   
   a {
@@ -62,4 +51,17 @@ body {
     background-position: center;
     width: 33px;
     height: 33px;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    margin-top: 30px;
   }
